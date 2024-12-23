@@ -47,4 +47,21 @@ resultat = liste_somme[0]
 for i in range(1, len(liste_somme)):
     resultat = resultat + liste_somme[i]
 
-print("Le résultat est :",resultat)
+#print("Le résultat du puzzle 1 est :",resultat)   
+
+occ = []
+liste_occ = []
+
+def occurence():
+    for i in range(len(liste_gauche)):
+        occ = liste_droite.count(liste_gauche[i])
+        produit = occ * liste_gauche[i]
+        liste_occ.append(produit)
+
+occurence()
+
+res = liste_occ[0]
+for i in range(1, len(liste_occ)):
+    res = res + liste_occ[i]
+
+print("Le résultat du puzzle 2 est :", res)
